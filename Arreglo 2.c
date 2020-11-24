@@ -5,7 +5,7 @@ int a;
 int b;
 int c;
 scanf("%d", &a);
-int arreglo[a];
+int arreglo[x];
 for(int b=0;b<a;b++){
   scanf("%d", &arreglo[b]);
  }
