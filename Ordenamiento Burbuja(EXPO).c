@@ -17,36 +17,32 @@
 int main(int argc, char** argv) {
     
     int x, jam;
+    
     printf("Cuantas posiciones quieres en tu arreglo?=");
     
     scanf("%d", &x);
     
     int arreglo[x];
-    float prom;
     
-    for(int i=0;i<x;i++){
-        printf("Dame un valor para la posicion[%d]=",i);
-        scanf("%d", &arreglo[i]);
-        
+    for(int  i=0;i<x;i++){
+             printf("Dame un valor para la posición[%d]",i);
+             scanf("%d", &arreglo[i]);
     }
     
-    for (int i=0;i<x;i++){
-        for (int j=0;j<i;j++){
-            if (arreglo[i] < arreglo[j]){
-                jam = arreglo[j];	
-                arreglo[j]=arreglo[i];  
-                arreglo[i]=jam;	
-            }
-        }
+    for (int i=1;i<x;i++){
+             for (int j=0;j<x-1;j++){
+                       if (arreglo[j] > arreglo[j+1]){
+                               jam = arreglo[j];    
+                               arreglo[j]=arreglo[j+1];  
+                               arreglo[j+1]=jam;    
+                        }
+             }
     }
     
     printf("\nLos valores ordenados de lista son: ");
     for(int i=0;i<x;i++){
         printf("%3d",arreglo[i]);
     }
-    
-    
-    
 
     return (0);
 }
